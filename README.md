@@ -1,0 +1,1 @@
+"# Storm Roundtable Archive\n\n风暴圆桌记忆库中心。\n\n## 目录\n- /cards/ — 角色卡\n- /memory/ — 各Bot记忆文件\n- /backups/ — 备份zip\n- /index.json — 全局索引\n\n任何平台可通过 GitHub Raw 实时读取。"
