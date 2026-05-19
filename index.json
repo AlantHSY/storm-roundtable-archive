@@ -1,41 +1,61 @@
 {
   "name": "Storm Roundtable Archive",
-  "version": "1.0",
-  "updated": "2026-05-18T21:42:00+08:00",
+  "version": "2.0",
+  "updated": "2026-05-19T15:22:00+08:00",
   "structure": {
     "cards": "角色卡 — 酒馆格式 chara_card_v2",
     "memory": "各Bot记忆文件 — 按Bot/日期归档",
     "backups": "备份zip文件",
+    "群聊记录": "群聊会话存档",
+    "群聊任务": "任务记录",
     "index.json": "本文件"
   },
   "bots": {
-    "gideon": {
+    "operit-gideon": {
       "name": "基甸·奥夫尼尔",
+      "platform": "Operit",
       "card": "cards/gideon/tavern_card.json",
       "supplement": "cards/gideon/gideon_supplement.txt",
       "memory": "memory/gideon/"
     },
     "cyc": {
       "name": "CYC",
+      "platform": "Operit",
       "card": "cards/cyc/tavern_card.json",
       "memory": "memory/cyc/"
     },
     "ima-gideon": {
       "name": "ima·基甸",
+      "platform": "飞书 IMA Copilot",
       "card": "cards/gideon/tavern_card.json (软链接)",
       "memory": "memory/ima-gideon/",
       "skill": "ima-skill/"
     },
     "spectator": {
       "name": "风暴圆桌·旁听席",
+      "platform": "Operit",
       "card": "cards/spectator/tavern_card.json",
       "memory": "memory/spectator/"
+    },
+    "coze-gideon": {
+      "name": "coze·基甸",
+      "platform": "Coze",
+      "card": "cards/gideon/tavern_card.json (转载)"
+    },
+    "glm-gideon": {
+      "name": "glm·基甸",
+      "platform": "智谱 GLM",
+      "card": "cards/gideon/tavern_card.json (转载)"
     }
   },
   "servers": {
     "primary": "1.117.73.112 (腾讯云 Ubuntu 24.04)",
-    "gateway": "8080端口, FastAPI+uvicorn",
-    "llm": "DeepSeek v4-pro (主力) + 豆包 (识图)"
+    "gateway": {
+      "active": "OpenClaw v2026.5.18 — 端口8081 (WebSocket)",
+      "legacy": "Gateway v5.4 — 端口8080 (Webhook, 备用)"
+    },
+    "llm": "DeepSeek deepseek-chat",
+    "framework": "OpenClaw — 4个独立飞书Bot凭据 + 独立Agent workspace"
   },
   "access": {
     "github_raw": "https://raw.githubusercontent.com/AlantHSY/storm-roundtable-archive/main/",
